@@ -5,25 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-    <script
-      src="https://unpkg.com/react@16/umd/react.development.js"
-      crossorigin
-    ></script>
-    <script
-      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
-      crossorigin
-    ></script>
-    <script
-      src="https://unpkg.com/babel-standalone@6/babel.min.js"
-      crossorigin
-    ></script>
+    <script src="react.development.js" crossorigin></script>
+    <script src="react-dom.development.js" crossorigin></script>
+    <script src="babel.min.js" crossorigin></script>
   </head>
   <body>
     <body>
-      <div id=""></div>
+      <div id="application-root"></div>
 
       <script type="text/babel">
-        ReactDOM.render(<div />, document.querySelector("#"));
+
+            function Resume(){
+              return (
+          <div>
+          <header role="banner">
+          <h1>Sally Student</h1>
+          <p>Totally a real person</p>
+        </header>
+
+        <main role="main">
+
+          <section role="region">
+            <h2>Contact Info</h2>
+
+            <div className="indent">
+              <img src="http://ia.media-imdb.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_UX214_CR0,0,214,317_AL_.jpg" alt="Sally Student" />
+
+              <address>
+                Sally Student<br />
+                <a href="mailto:sstudent@example.com">sstudent@example.com</a><br />
+                (404) 555 - 1234<br />
+              </address>
+            </div>
+
+          </section>
+
+          <section role="region">
+            <h2>Education</h2>
+
+            <section role="region" className="indent">
+              <h3>University of South Florida</h3>
+              <address>
+                4202 E Fowler Ave <br />
+                Tampa, FL 33620 <br />
+              </address>
+            </section>
+
+          </section>
+
+          <section role="region">
+            <h2>Employment History</h2>
+
+            <section role="region" className="indent">
+              <h3>Vice President (E Corp)</h3>
+              <p>
+                <time dateTime="2008-08-05">08/05/2008</time> -
+                <time dateTime="2015-07-22">07/22/2015</time>
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
+                delectus consequuntur dolorem reprehenderit ratione unde fugiat error
+                voluptas animi, commodi, aspernatur quisquam molestias corporis amet
+                est, sint repellat dolores consectetur.
+              </p>
+            </section>
+
+            <section role="region" className="indent">
+              <h3>Product Manager (E Corp)</h3>
+              <p>
+                <time dateTime="2005-12-16">12/16/2005</time> -
+                <time dateTime="2008-08-04">08/04/2008</time>
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
+                delectus consequuntur dolorem reprehenderit ratione unde fugiat error
+                voluptas animi, commodi, aspernatur quisquam molestias corporis amet
+                est, sint repellat dolores consectetur.
+              </p>
+            </section>
+
+          </section>
+
+        </main>
+        </div>
+              );
+          }
+
+            ReactDOM.render(<Resume />, document.querySelector("#application-root"));
       </script>
     </body>
   </body>
